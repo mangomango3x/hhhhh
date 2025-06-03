@@ -1,0 +1,6 @@
+2025-06-03 03:23:17 | [32mINFO[0m | discord_bot | setup_logger:94 | Logger 'discord_bot' initialized with level INFO
+2025-06-03 03:23:17 | [32mINFO[0m | discord_bot.fact_checker | __init__:37 | Fact checker initialized with Gemini 1.5
+2025-06-03 03:23:17 | [32mINFO[0m | discord_bot.rate_limiter | __init__:29 | Rate limiter initialized: 5 requests per 300s
+2025-06-03 03:23:17 | [32mINFO[0m | discord_bot | main:36 | Starting Discord Fact-Checker Bot...
+2025-06-03 03:23:20 | [32mINFO[0m | discord_bot.discord_bot | on_ready:49 | Second Tiosia Community#2600 has connected to Discord!
+2025-06-03 03:23:20 | [32mINFO[0m | discord_bot.discord_bot | on_ready:50 | Bot is in 1 guilds

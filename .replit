@@ -1,0 +1,48 @@
+modules = ["python-3.11"]
+
+[nix]
+channel = "stable-24_05"
+
+[workflows]
+runButton = "Discord Fact Checker"
+
+[[workflows.workflow]]
+name = "Project"
+mode = "parallel"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "Discord Bot"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "discord_bot_test"
+
+[[workflows.workflow]]
+name = "Discord Bot"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "pip install discord.py google-generativeai python-dotenv asyncio && python main.py"
+
+[[workflows.workflow]]
+name = "discord_bot_test"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "pip install discord.py google-generativeai python-dotenv asyncio && python main.py"
+
+[[workflows.workflow]]
+name = "Discord Fact Checker"
+author = 43382367
+mode = "sequential"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "python main.py"
+
+[deployment]
+run = ["sh", "-c", "pip install discord.py google-generativeai python-dotenv asyncio && python main.py"]
